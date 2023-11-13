@@ -1,0 +1,42 @@
+There is two type of CD : Continuous Delivery
+                          Continuous Deployment
+
+Continuous Deployment : It works autometically.
+                        Test --> Staging --> Production
+
+Continuous Delivery   : It requires manual interventions.
+                        Test --> Staging ---> Manual interventions --> Production
+
+
+
+In this lab we will learn how to build a Continuous Deployment pipeline in Jenkins.
+
+
+Step 1 : We will create 2 items eg. Project-3-build and Project-3-deploy
+
+Step 2 : Install pulgin Build Pipeline.
+
+Step 3 : Go to Project-3-build --> Configure --> Post-build actions
+         --> Build other projects --> Apply/Save
+
+Step 4 : Dashboard --> + (beside all) --> Name --> Build Pipeline View
+
+Step 5 : Name --> Pipeline flow-Upstream/downstream --> Select Job --> Project-3-build
+
+Step 6 : Run --> and you will see your both projects will first build then deploy one.
+
+         This is how you will build your first pipeline successfully.
+
+
+
+Now we will learn how Continuous Delivery works.
+
+Step 7 : Add another item or job Project-3-delivery.
+
+Step 8 : If you want to run this project after Project-3-deploy
+         go to Project-3-deploy configure --> post-build Actions --> Build other projects(manual)
+         --> Add Project-3-delivery --> Apply/Save.
+
+Step 9 : Now run your pipeline you will see your oth job will run autometically and third one 
+         will not untill you manually triggers it by pressing the trigger button on the job.
+

@@ -1,0 +1,14 @@
+If we run three or job job in a pipeline it will take some time because they will execute
+one after other but to save time we can run jobs in PARALLEL as well lets see how that works.
+
+Step 1 : In earlier lab the order was Build-deploy-delivery in which delivery was manual.
+
+Step 2 : Now we will add a Job named Project-3-parallel job.
+
+Step 3 : Go to Project pipeline dashboard, now if you want to run this job paralle to deploy then
+         go to Build --> Configure --> Post-build Actions --> Build other projects
+         If you see one project is already added there which is deploy, add Project-3-parallel job.
+
+Step 4 : Dashboard --> project-pipeline --> Run
+
+         Once you run it you will see Project-3-deploy and Project-3-parallel job will run parallelly.
